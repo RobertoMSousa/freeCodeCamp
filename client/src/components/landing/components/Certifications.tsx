@@ -1,16 +1,15 @@
 import { Col, Row } from '@freecodecamp/react-bootstrap';
-import PropTypes from 'prop-types';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Map from '../../Map/index';
 import { Spacer } from '../../helpers';
 import BigCallToAction from './BigCallToAction';
 
-const propTypes = {
-  page: PropTypes.string
-};
+interface Props {
+  page?: string;
+}
 
-const Certifications = ({ page = 'landing' }) => {
+const Certifications = ({ page = 'landing' }: Props): JSX.Element => {
   const { t } = useTranslation();
 
   return (
@@ -27,5 +26,4 @@ const Certifications = ({ page = 'landing' }) => {
 };
 
 Certifications.displayName = 'Certifications';
-Certifications.propTypes = propTypes;
 export default Certifications;

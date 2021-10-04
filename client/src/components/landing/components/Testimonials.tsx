@@ -1,17 +1,14 @@
-import PropTypes from 'prop-types';
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import React from 'react';
-
 import { Trans, useTranslation } from 'react-i18next';
+
 import emmaImg from '../../../assets/images/landing/Emma.png';
 import sarahImg from '../../../assets/images/landing/Sarah.png';
 import shawnImg from '../../../assets/images/landing/Shawn.png';
+
 import { ImageLoader } from '../../helpers';
 
-const propTypes = {
-  page: PropTypes.string
-};
-
-const Testimonials = () => {
+const Testimonials = (): JSX.Element => {
   const { t } = useTranslation();
 
   return (
@@ -106,5 +103,4 @@ const Testimonials = () => {
 };
 
 Testimonials.displayName = 'Testimonals';
-Testimonials.propTypes = propTypes;
 export default Testimonials;

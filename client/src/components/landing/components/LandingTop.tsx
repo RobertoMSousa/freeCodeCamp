@@ -1,5 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { Col, Row } from '@freecodecamp/react-bootstrap';
-import PropTypes from 'prop-types';
+
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import envData from '../../../../../config/env.json';
@@ -16,12 +17,12 @@ import { Spacer } from '../../helpers';
 import BigCallToAction from './BigCallToAction';
 import CampersImage from './CampersImage';
 
-const propTypes = {
-  page: PropTypes.string
-};
-
+interface Props {
+  page?: string;
+}
 const { clientLocale } = envData;
-function LandingTop({ page }) {
+
+function LandingTop({ page }: Props): JSX.Element {
   const { t } = useTranslation();
   const showChineseLogos = ['chinese', 'chinese-tradition'].includes(
     clientLocale
